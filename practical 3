@@ -1,1 +1,9 @@
-
+s Heuristic 2: Manhattan Distance
+def manhattan(state):
+    distance = 0
+    for i in range(9):
+        if state[i] != 0:
+            x, y = divmod(i, 3)
+            a, b = divmod(goal.index(state[i]), 3)
+            distance += abs(x-a) + abs(y-b)
+    return distance
